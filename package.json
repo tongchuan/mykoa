@@ -12,15 +12,16 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm test",
+      "precommit": "npm test",
       "pre-push": "lint-staged",
     }
   },
   "lint-staged": {
-      "**": [
-          "prettier --config .prettierrc --write",
-          "eslint --fix",
-          "git add"
+      "src/**": [
+        "eslint src --fix",
+        "prettier --config .prettierrc --write",
+        "eslint --fix",
+        "git add"
       ]
   },
   "keywords": [
