@@ -7,7 +7,8 @@
     "build": "babel src --out-dir lib",
     "start": "babel-node src/index.js",
     "lint": "eslint src --fix",
-    "lint:create": "eslint --init"
+    "lint:create": "eslint --init",
+    "precommit": "npm run lint"
   },
   "husky": {
     "hooks": {
@@ -37,6 +38,7 @@
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^4.2.1",
+    "husky": "^4.3.0",
     "pre-commit": "^1.2.2"
   },
   "dependencies": {
