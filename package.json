@@ -6,7 +6,7 @@
   "scripts": {
     "build": "babel src --out-dir lib",
     "start": "babel-node src/index.js",
-    "lint": "eslint src --fix",
+    "lint": "./node_modules/.bin/eslint src --fix",
     "lint:create": "eslint --init",
     "precommit-msg": "echo 'Pre-commit checks...' && exit 0",
     "precommit": "lint-staged",
@@ -15,7 +15,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "test",
+      "pre-commit": "lint",
       "pre-push": "lint-staged"
     }
   },
