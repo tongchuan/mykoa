@@ -17,11 +17,12 @@
     }
   },
   "lint-staged": {
-      "src/**": [
-          "prettier --config .prettierrc --write",
-          "eslint --fix",
-          "git add"
-      ]
+    "*": "eslint src --fix"
+      // "src/**": [
+      //     "prettier --config .prettierrc --write",
+      //     "eslint --fix",
+      //     "git add"
+      // ]
   },
   "keywords": [
     "my",
