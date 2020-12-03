@@ -9,8 +9,7 @@
     "lint": "./node_modules/.bin/eslint src --fix",
     "lint:create": "eslint --init",
     "precommit-msg": "echo 'Pre-commit checks...' && exit 0",
-    "commit-msg": "echo $HUSKY_GIT_PARAMS",
-    "test":"echo zhangtongchuan"
+    "commit-msg": "echo $HUSKY_GIT_PARAMS"
   },
   "husky": {
     "hooks": {
