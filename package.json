@@ -1,0 +1,26 @@
+{
+  "name": "mykoa",
+  "version": "1.0.0",
+  "description": "my koa test",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "start"
+  },
+  "keywords": [
+    "my",
+    "koa"
+  ],
+  "author": "tongchuanxing@163.com",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.12.8",
+    "@babel/core": "^7.12.9",
+    "@babel/node": "^7.12.6",
+    "@babel/plugin-proposal-class-properties": "^7.12.1",
+    "@babel/plugin-proposal-decorators": "^7.12.1",
+    "@babel/preset-env": "^7.12.7",
+    "@babel/preset-flow": "^7.12.1",
+    "@babel/preset-react": "^7.12.7",
+    "@babel/preset-typescript": "^7.12.7"
+  }
+}

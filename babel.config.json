@@ -1,0 +1,21 @@
+{
+	"presets": [
+		[
+	      "@babel/preset-env",
+	      {
+	        "useBuiltIns": "entry",
+	        "targets": {
+	          "esmodules": true
+	        }
+	      }
+	    ],
+	    "@babel/preset-flow",
+	    "@babel/preset-react",
+	    "@babel/preset-typescript"
+	],
+	"plugins": [
+		"@babel/plugin-proposal-decorators",
+		"@babel/plugin-proposal-class-properties",
+		"@babel/plugin-proposal-private-methods"
+	]
+}
