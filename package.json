@@ -15,15 +15,14 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint",
+      "pre-commit": "lint-staged",
       "pre-push": "lint-staged"
     }
   },
   "lint-staged": {
       "src/**": [
-        "eslint src --fix",
-        "prettier --config .prettierrc --write",
-        "eslint --fix",
+        "./node_modules/.bin/eslint src --fix",
+        "./node_modules/.bin/prettier --config .prettierrc --write",
         "git add"
       ]
   },
