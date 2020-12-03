@@ -8,6 +8,7 @@
     "start": "babel-node src/index.js",
     "lint": "eslint src --fix",
     "lint:create": "eslint --init",
+    "precommit-msg": "echo 'Pre-commit checks...' && exit 0",
     "precommit": "npm run lint"
   },
   "husky": {
