@@ -8,11 +8,11 @@
     "start": "babel-node src/index.js",
     "lint": "eslint src --fix",
     "lint:create": "eslint --init",
-    "precommit": "npm run lint"
+    "precommit": "lint-staged"
   },
   "husky": {
     "hooks": {
-      "precommit": "lint-staged",
+      "pre-commit": "lint",
       "pre-push": "lint-staged",
     }
   },
