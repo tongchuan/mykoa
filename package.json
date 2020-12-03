@@ -7,9 +7,7 @@
     "build": "babel src --out-dir lib",
     "start": "babel-node src/index.js",
     "lint": "./node_modules/.bin/eslint src --fix",
-    "lint:create": "eslint --init",
-    "precommit-msg": "echo 'Pre-commit checks...' && exit 0",
-    "commit-msg": "echo $HUSKY_GIT_PARAMS"
+    "lint:create": "eslint --init"
   },
   "husky": {
     "hooks": {
