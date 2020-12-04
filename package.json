@@ -8,7 +8,8 @@
     "start": "babel-node src/index.js",
     "lint": "./node_modules/.bin/eslint src --fix",
     "lint:create": "./node_modules/.bin/eslint --init",
-    "prettier": "./node_modules/.bin/prettier --write src"
+    "prettier": "./node_modules/.bin/prettier --write src",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "husky": {
     "hooks": {
