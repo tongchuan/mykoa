@@ -7,19 +7,19 @@
     "build": "babel src --out-dir lib",
     "start": "babel-node src/index.js",
     "lint": "./node_modules/.bin/eslint src --fix",
-    "lint:create": "eslint --init"
+    "lint:create": "eslint --init",
+    "prettier": "prettier --write src"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint",
+      "pre-commit": "echo 'husky' && npm run lint && npm run prettier",
       "pre-push": "lint-staged"
     }
   },
   "lint-staged": {
       "src/**": [
-        "./node_modules/.bin/eslint src --fix",
         "./node_modules/.bin/prettier --config .prettierrc --write",
-        "git add"
+        "./node_modules/.bin/eslint src --fix"
       ]
   },
   "keywords": [
