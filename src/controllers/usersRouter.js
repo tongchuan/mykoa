@@ -5,7 +5,7 @@ import Test from '../pages/Test'
 
 const router = new Router()
 
-router.use('/:id', async (ctx, next) => {
+router.use('/:id', async (ctx) => {
   // console.log(ctx)
   // const html = ReactDOMServer.renderToStaticMarkup(<Test id={ctx.params.id} />)
   // console.log(ctx.getHtml)
@@ -18,7 +18,7 @@ router.use('/:id', async (ctx, next) => {
   // ctx.body = `user router hello ${ctx.params.id}`
 })
 
-router.use(async (ctx, next) => {
+router.use(async (ctx) => {
   ctx.body = 'user router hello'
 })
 export default router

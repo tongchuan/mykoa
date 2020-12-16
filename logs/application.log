@@ -1,10 +1,5 @@
-[2020-12-08T14:50:16.429] [ERROR] application - er4rpr
-[2020-12-08T14:50:16.634] [ERROR] application - er4rpr
-[2020-12-08T14:54:34.239] [ERROR] application - er4rpr
-[2020-12-08T14:54:34.319] [ERROR] application - er4rpr
-[2020-12-08T15:02:13.200] [ERROR] application - server error NotFoundError: Not Found
-    at Object.throw (/git.yonyou.com/mykoa/node_modules/_koa@2.13.0@koa/lib/context.js:97:11)
-    at /git.yonyou.com/mykoa/node_modules/_koa-static-server@1.5.2@koa-static-server/index.js:101:30
-[2020-12-08T15:46:33.492] [ERROR] application - er4rpr
-[2020-12-08T16:17:43.069] [ERROR] application - er4rpr
-[2020-12-08T16:22:40.808] [ERROR] application - er4rpr
+[2020-12-15T21:23:36.654] [ERROR] application - er4rpr
+[2020-12-15T21:23:36.845] [ERROR] application - er4rpr
+[2020-12-15T21:23:38.394] [ERROR] application - er4rpr
+[2020-12-15T21:23:38.566] [ERROR] application - er4rpr
+[2020-12-15T21:24:18.592] [ERROR] application - er4rpr
