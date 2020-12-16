@@ -24,7 +24,6 @@ app.use(compress)
 app.use(router)
 
 // // response
-// console.log('22222', 333)
 // console.log('222')
 http.createServer(app.callback()).listen(3000)
 https.createServer(app.callback()).listen(3001)
