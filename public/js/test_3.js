@@ -55,6 +55,75 @@ function drawFillStyle(ctx){
 }
 
 
+function drawStrokeStyle(ctx){
+    let gradient;
+    // strokeStyle 属性设置或返回用于笔触的颜色、渐变或模式.默认值#000000
+    // context.strokeStyle=color|gradient|pattern;
+    // color   指示绘图笔触颜色的 CSS 颜色值。默认值是 #000000。
+    // gradient    用于填充绘图的渐变对象（线性或放射性）
+    // pattern 用于创建 pattern 笔触的 pattern 对象
+    ctx.strokeStyle="#0000ff"
+    ctx.strokeRect(20,20,150,100);
+    
+    ctx.save()
+    ctx.translate(0,120)
+    gradient = ctx.createLinearGradient(0,0,170,0);
+    gradient.addColorStop(0,"magenta")
+    gradient.addColorStop(0.5,"blue")
+    gradient.addColorStop(1,"red")
+    ctx.strokeStyle=gradient;
+    ctx.lineWidth=5;
+    ctx.strokeRect(20,20,150,100)
+    ctx.restore()
+
+    ctx.save()
+    ctx.translate(0,240)
+    // translate() 方法重新映射画布上的 (0,0) 位置。
+    // x   添加到水平坐标（x）上的值
+    // y   添加到垂直坐标（y）上的值
+    let radial = ctx.createRadialGradient(75,50,5,90,60,100)
+    radial.addColorStop(0,'red')
+    radial.addColorStop(1,'white')
+    ctx.strokeStyle=radial
+    ctx.lineWidth=5;
+    ctx.strokeRect(20,20,150,100)
+    ctx.restore()
+
+    ctx.save()
+    ctx.translate(0,360)
+    ctx.font = "30px Verdana"
+    // context.font="italic small-caps bold 12px arial";
+    // font 属性设置或返回画布上文本内容的当前字体属性
+    // font 属性使用的语法与 CSS font 属性相同。
+    // 默认值： 10px sans-serif
+    // font-style      规定字体样式。可能的值： normal | italic | oblique
+    // font-variant    规定字体变体。可能的值： normal | small-caps
+    // font-weight     规定字体的粗细。可能的值：normal | bold|bolder| lighter | 100 | 200 | 300 | 400 | 500 | 600 | 700 | 800 | 900 |
+    // font-size / line-height 规定字号和行高，以像素计。
+    // font-family 规定字体系列。
+    // caption 使用标题控件的字体（比如按钮、下拉列表等）。
+    // icon    使用用于标记图标的字体。
+    // menu    使用用于菜单中的字体（下拉列表和菜单列表）。
+    // message-box 使用用于对话框中的字体。
+    // small-caption   使用用于标记小型控件的字体。
+    // status-bar  使用用于窗口状态栏中的字体。
+
+
+    gradient = ctx.createLinearGradient(0,0,200,0)
+    gradient.addColorStop(0,"magenta")
+    gradient.addColorStop(0.5,"blue")
+    gradient.addColorStop(1,"red")
+    ctx.strokeStyle=gradient;
+    ctx.strokeText("w3school.com.cn",10,50)
+}
+
+function drawShadowColor(ctx){
+    ctx.shadowBlur=20;
+    ctx.shadowColor="red"//"black"
+    ctx.fillStyle="blue"
+    ctx.fillRect(20,20,100,80)
+}
+
 
 let canvas;
 class Canvas{
@@ -73,6 +142,8 @@ class Canvas{
     console.log('init');
     this.num=5
     // drawFillStyle(this.ctx)
+    // drawStrokeStyle(this.ctx)
+    drawShadowColor(this.ctx)
   }
 
   render(){
