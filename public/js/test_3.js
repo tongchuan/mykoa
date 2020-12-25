@@ -160,8 +160,24 @@ function drawSun(ctx,sun,moon,earth){
     ctx.arc(150,150,105,0,Math.PI*2,false); // Earth orbit
     ctx.stroke()
 
+}
 
-
+function drawFiveStar(context){
+    context.save()
+    let R1 = 150
+    let R2 = 75
+    context.translate(300,300)
+    context.rotate(Math.PI/180*40)
+    context.beginPath();
+    for (var i = 0;i < 5;i++) {
+       context.lineTo(Math.cos( (18+i*72-30)/180*Math.PI )*R1 , -Math.sin( (18+i*72-30)/180*Math.PI )*R1 );
+       context.lineTo(Math.cos( (54+i*72-30)/180*Math.PI )*R2, -Math.sin( (54+i*72-30)/180*Math.PI )*R2 );
+    }  //30旋转弧度
+    context.closePath();
+    context.fillStyle = "red";
+    context.fill();
+    context.stroke();
+    context.restore()
 }
 
 let canvas;
@@ -188,6 +204,8 @@ class Canvas{
     this.sun.src = './img/Canvas_sun.png';
     this.moon.src = './img/Canvas_moon.png';
     this.earth.src = './img/Canvas_earth.png';
+
+    drawFiveStar(this.ctx)
   }
 
   render(){
