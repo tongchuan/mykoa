@@ -124,6 +124,45 @@ function drawShadowColor(ctx){
     ctx.fillRect(20,20,100,80)
 }
 
+function drawSun(ctx,sun,moon,earth){
+    let {width,height} = ctx.canvas
+    ctx.clearRect(0,0,width,height);
+
+
+    // 
+
+    ctx.fillStyle='rgba(0,0,0,0.4)'
+    ctx.strokeStyle='rgba(0,153,255,0.4)';
+    ctx.fillRect(0,0,width,height)
+    ctx.save()
+    
+    ctx.translate(width/2,height/2);
+    ctx.drawImage(sun,0,0,300,300);
+    // earth
+    let time = new Date();
+    ctx.rotate(((2*Math.PI)/60)*time.getSeconds() + ((2*Math.PI)/60000)*time.getMilliseconds())
+    ctx.translate(105,0);
+    ctx.fillRect(0,12,50,24);
+    ctx.drawImage(earth,-12,-12)
+
+    ctx.save()
+    ctx.rotate(((2*Math.PI)/6)*time.getSeconds() + ((2*Math.PI)/6000)*time.getMilliseconds())
+    ctx.translate(0,28.5)
+    ctx.drawImage(moon,-3.5,-3.5)
+    ctx.restore()
+
+
+
+    ctx.restore()
+    
+
+    ctx.beginPath();
+    ctx.arc(150,150,105,0,Math.PI*2,false); // Earth orbit
+    ctx.stroke()
+
+
+
+}
 
 let canvas;
 class Canvas{
@@ -136,18 +175,23 @@ class Canvas{
     this.height = this.canvas.height = window.innerHeight;
     this.ctx = this.canvas.getContext('2d')
     document.getElementsByTagName('body')[0].appendChild(this.canvas)
+    this.sun = new Image()
+    this.moon = new Image()
+    this.earth = new Image()
   }
 
   init(){
-    console.log('init');
     this.num=5
     // drawFillStyle(this.ctx)
     // drawStrokeStyle(this.ctx)
-    drawShadowColor(this.ctx)
+    // drawShadowColor(this.ctx)
+    this.sun.src = './img/Canvas_sun.png';
+    this.moon.src = './img/Canvas_moon.png';
+    this.earth.src = './img/Canvas_earth.png';
   }
 
   render(){
-    
+    // drawSun(this.ctx,this.sun,this.moon,this.earth)
 
 
 
